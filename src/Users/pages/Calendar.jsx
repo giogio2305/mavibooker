@@ -2,6 +2,8 @@ import { NavArrowDown, Bell, Calendar, CalendarPlus, Clock, Community, LogOut, N
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import cal from '../../assets/calendar.png'
+import TimeGrid from '../components/TimeGrid';
+import { Dialog } from '@headlessui/react'
 
 function Home() {
   document.title="Calendar";
@@ -11,6 +13,7 @@ function Home() {
   const [monthidex, setMonthIndex] = useState(date.getMonth());
   const [ldisabled, setLdisabled] = useState(false);
   const [rdisabled, setRdisabled] = useState(false);
+  const [isOpen, setisopen] = useState(false);
   return (
   <>
         {/* Outlet */}
@@ -38,7 +41,7 @@ function Home() {
                 <h3 className='text-sm text-green-800 font-bold mt-0.5'>Available</h3>
               </div>
 
-              <div className="w-36 flex items-center justify-center h-auto p-2 rounded-lg bg-[#100693]">
+              <div className="w-36 flex items-center justify-center h-auto cursor-pointer p-2 rounded-lg bg-[#100693]" onClick={()=>setisopen(true)}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 21H5C3.89543 21 3 20.1046 3 19V10H21V13M15 4V2M15 4V6M15 4H10.5" stroke="#FAFCFB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M3 10V6C3 4.89543 3.89543 4 5 4H7" stroke="#FAFCFB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -111,7 +114,7 @@ function Home() {
             </div>
 
             {/* Calendar controls bar */}
-            <div className="w-full flex items-center justify-between p-4 mt-1">
+            {/* <div className="w-full flex items-center justify-between p-4 mt-1">
               <div className="flex items-center w-auto">
                 <h2 className='font-bold text-zinc-800 text-xl mr-2'>{months[monthidex]}</h2>
                 <h2 className='font-bold text-[#100693] text-xl'>{date.getFullYear()}</h2>
@@ -136,7 +139,9 @@ function Home() {
                     <NavArrowDown className='w-4 h-4 text-zinc-800'/>
                   </button>
               </div>
-            </div>
+            </div> */}
+            <TimeGrid/>
+            
         </div>
         </>
   )

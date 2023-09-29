@@ -2,3 +2,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.fc-view-harness {
+    @apply overflow-hidden overflow-x-auto w-full;
+    @apply border-none;
+  }
+  
+  @screen sm {
+    .fc-view-harness {
+      @apply rounded-lg;
+    }
+  }
+
+  .fc .fc-toolbar-title {
+ @apply font-bold text-zinc-800 text-xl mr-2
+}
+
+.fc .fc-button {
+@apply w-16 px-2  py-1 flex items-center justify-center rounded-l-md border-r-0 font-semibold text-zinc-900 border-gray-200 bg-white shadow focus:outline-offset-0
+}
+
+.fc-button-group > .fc-button {
+    @apply w-20 px-2  py-1 flex items-center justify-center rounded-lg   bg-white shadow text-zinc-800
+}
+
+.fc .fc-today-button {
+    @apply w-20 px-2  py-1 flex items-center justify-center rounded-lg   bg-white shadow  text-zinc-800
+}
+
+
+.fc .fc-toolbar {
+    @apply w-full flex items-center justify-between px-2
+}
+
+.fc .fc-toolbar.fc-header-toolbar, .fc-toolbar-chunk {
+    @apply flex items-center
+}
+
+.fc .fc-view-harness-active{
+    background: #fafcfb;
+}
+.fc .fc-timegrid-slot { height: 28px !important }
+
+
+

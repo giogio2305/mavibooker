@@ -1,0 +1,53 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Break time",
+      "startTime": "13:00:00",
+      "endTime": "14:00:00",
+      "location": "",
+      "classNames": [
+        "bg-orange-200",
+        "text-orange-800",
+        " border-0"
+      ],
+      "teams": false,
+      "isResizing": true,
+      "status": "Pause",
+      "editable": false
+    },
+    {
+      "id": 2,
+      "title": "Daily Up",
+      "location": "MAVDEV common space",
+      "startTime": "08:30:00",
+      "endTime": "09:00:00",
+      "status": "Recurrent",
+      "dow": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "classNames": [
+        "bg-lime-200",
+        "text-lime-800",
+        "border-0"
+      ],
+      "eventOverlap": false,
+      "teams": [
+        {
+          "id": 1,
+          "name": "I.T",
+          "color": [
+            "bg-fuschia-300",
+            "text-fuschia-800"
+          ]
+        }
+      ],
+      "link": "https//:www.teams.microsoft.com/ert-pou",
+      "author": "Cron",
+      "editable": false
+    }
+  ]
+}
