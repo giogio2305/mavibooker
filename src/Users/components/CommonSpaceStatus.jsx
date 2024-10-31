@@ -42,7 +42,7 @@ function CommonSpaceStatus() {
 
             return isMeetingRoom && (
                 (eventStart <= fifteenMinutesFromNow && eventStart >= now) || // Commence dans les 15 prochaines minutes
-                (eventStart <= now && eventEnd >= now) // Est en cours
+                (eventStart <= now && eventEnd >= now && event.status !== 'Canceled') // Est en cours
             );
         });
 

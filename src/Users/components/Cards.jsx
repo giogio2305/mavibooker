@@ -55,6 +55,8 @@ function Cards({ event }) {
             return `Begin in ${minutes} min`;
         } else if(timeDiff > 0 && eventStatus === 'Canceled') { 
             return 'Canceled';
+        } else if(timeDiff < 0 && eventStatus === 'Canceled') { 
+            return 'Canceled';
         }
         return 'Passed';
     };
@@ -68,9 +70,9 @@ function Cards({ event }) {
     const eventEnd = new Date(event.end);
     const now = new Date();
 
-    if (now >= eventStart && now <= eventEnd) {
+    if (now >= eventStart && now <= eventEnd && eventStatus !=='Canceled') {
         // Si l'événement est en cours
-        statusColor = 'text-blue-800'; // Bleu pour l'événement en cours
+        statusColor = 'text-blue-900'; // Bleu pour l'événement en cours
         backgroundColor = 'bg-blue-100'; // Fond bleu clair
         icon = <AntennaSignal className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Event is ongoing'; // Texte pour l'événement en cours
@@ -79,12 +81,12 @@ function Cards({ event }) {
         backgroundColor = 'bg-zinc-100';
         icon = <CheckCircleIcon className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Passed';
-    } else if (new Date(event.start) - new Date() <= 30 * 60000 && eventStatus !=='Canceled') { // Proche si moins de 30 minutes
+    } else if (new Date(event.start) - new Date() <= 15 * 60000 && eventStatus !=='Canceled') { // Proche si moins de 30 minutes
         statusColor = 'text-green-800'; // Vert pour proche
         icon = <Timer className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Event is coming soon'; // Texte pour l'événement proche
     } else if (timeUntilEvent === 'Canceled') { // Si l'événement est annulé
-        statusColor = 'text-red-800'; // Rouge pour annulé
+        statusColor = 'text-red-900'; // Rouge pour annulé
         backgroundColor = 'bg-red-100';
         icon = <XCircleIcon className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Cancelled'; // Texte pour annulé
@@ -118,7 +120,7 @@ function Cards({ event }) {
             <div className={`w-full px-1.5 py-[3px] flex items-center justify-between mt-3.5 rounded ${backgroundColor}`}>
                 <div className="flex items-center">
                     {icon}
-                    <p className={`text-[12px] font-semibold ml-2 ${statusColor}`}>{statusText}</p>
+                    <p className={`text-[12px] font-semibold ml-0.5 ${statusColor}`}>{statusText}</p>
                 </div>
                 {event.link && (
                     <Link to={event.link} className={`${statusColor} truncate  text-[12px] font-semibold underline mr-3`}>Link</Link>

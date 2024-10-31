@@ -770,7 +770,8 @@ const Event =({slotEventData, eved, onClose, fetchEvents})=>{
   const [video, setVideo] = useState(vidCallArr[2]);
   const [selectedTeam, setSelectedTeam] = useState([]);
   const [query, setQuery] = useState("");
-  console.log(slotEventData)
+
+  
   useEffect(() => {
     if (eved === true) {
       setLink(slotEventData.event.extendedProps.link);

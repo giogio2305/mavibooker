@@ -185,6 +185,31 @@
       ],
       "link": "",
       "author": "Testy"
+    },
+    {
+      "id": "qajN",
+      "title": "Jazz Session",
+      "start": "2024-10-31T16:00:00.000Z",
+      "end": "2024-10-31T16:30:00.000Z",
+      "location": "Meeting Room",
+      "status": "Future",
+      "classNames": [
+        "bg-green-200",
+        "text-green-800",
+        " border-green-200"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 4,
+          "name": "Finance"
+        }
+      ],
+      "link": "",
+      "author": "Testy"
     }
   ]
 }
