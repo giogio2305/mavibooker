@@ -4,7 +4,7 @@ import React from 'react'
 function Teams() {
   document.title="Teams";
   return (
-    <div className='w-full h-screen flex flex-col overflow-auto'>
+    <div className='w-full h-screen flex flex-col overflow-auto bg-zinc-50'>
       {/* Top bar */}
     <div className="w-full flex items-center justify-between p-4 mt-2">
       {/* Titles */}
@@ -17,7 +17,7 @@ function Teams() {
 
       <div className="flex items-center mr-3">
         <Community className='w-6 h-6 text-zinc-700 mr-1'/>
-        <button  className='min-w-12 px-2  py-1 flex items-center justify-center rounded-md  ml-2 bg-white shadow'>
+        <button  className='min-w-12 px-2  py-1 flex items-center justify-center rounded-md  ml-2 bg-white shadow-sm ring-1 ring-zinc-950/5'>
         <div className='w-2.5 h-2.5 shadow-xs rounded-full bg-purple-900  mr-1'></div>
         <h6 className='font-bold text-zinc-800 text-sm mx-2'>Frontend</h6>
         <NavArrowDown strokeWidth={2} className='mt-0.5 w-4 h-4 text-zinc-800'/>
@@ -52,12 +52,12 @@ function Teams() {
     <div className="w-full flex items-center justify-between p-4 mt-1">
     <div className='flex items-center w-auto'>
       {/* Search Bar */}
-      <div className="max-w-60 bg-white flex items-center shadow rounded-md p-1.5">
+      <div className="max-w-60 bg-white flex items-center ring-1 ring-gray-950/5 shadow rounded-md p-1.5">
         <Search strokeWidth={2} className='text-zinc-700 w-4 h-4 mx-1.5'/>
         <input type='text' placeholder='Search here...' className='text-[13px] w-48 border-0 outline-none h-auto'/>
       </div>
       {/* Sort Button */}
-      <button  className='min-w-12 px-2  py-1.5 flex items-center justify-center rounded-md  ml-2 bg-white shadow'>
+      <button  className='min-w-12 px-2  py-1.5 flex items-center justify-center rounded-md  ml-2 bg-white ring-1 ring-gray-950/5 shadow'>
         <SortDown strokeWidth={2} className='mt-0.5 w-4 h-4 text-zinc-700'/>
         <h6 className='font-semibold text-zinc-800 text-sm mx-2'>Sort by</h6>
         <NavArrowDown strokeWidth={2} className='mt-0.5 w-4 h-4 text-zinc-800'/>

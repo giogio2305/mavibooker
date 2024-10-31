@@ -27,19 +27,24 @@ const isWeekday = (date) => {
 
 const people = [
   { name: 'Meeting Room' },
-  { name: 'MAVDEV common space' },
   { name: 'Maviance Hall' },
   { name: 'Maviance Deido office' },
+  { name: 'Maviance Dev office' },
+  { name: 'Maviance Marketing office' },
 ]
 
 const teams = [
-  { id: 1, name: "Business" },
-  { id: 2, name: "Maviance staff" },
-  { id: 3, name: "Q.A" },
-  { id: 4, name: "Marketing" },
-  { id: 5, name: "Frontend" },
+  { id: 1, name: "Maviance staff" },
+  { id: 2, name: "Business" },
+  { id: 3, name: "Marketing" },
+  { id: 4, name: "Finance" },
+  { id: 5, name: "IT" },
   { id: 6, name: "Ops" },
-  { id: 7, name: "Finance" },
+  { id: 7, name: "Frontend" },
+  { id: 8, name: "Backend" },
+  { id: 9, name: "Q.A" },
+  { id: 10, name: "UI/UX" },
+  { id: 11, name: "Product Team" }
 ];
 
 const statusArr = [
@@ -147,15 +152,6 @@ const handleEventClick = (clickInfo) => {
     setEved(true)
     //console.log(JSON.stringify(clickInfo))
   }, 1000);
-  // console.log(JSON.stringify(clickInfo.el.fcSeg.end))
-  // if(new Date(JSON.stringify(clickInfo.el.fcSeg.end)).getTime() < moment().toDate().getTime()){
-  //   alert("You can not remove passed event");
-  // }
-  // else {
-  //   if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-  //     clickInfo.event.remove()
-  //   }
-  // }
 }
 
 const handleEvents = (events) => {setcurrentEvents(events)}
@@ -373,7 +369,6 @@ const NewEvent = ({slotData, evmd, onClose, fetchEvents}) => {
         fetchEvents();
         onClose()
       });
-      alert(JSON.stringify(postEvent));
       
     
     //     if (slotData.title) {
@@ -841,7 +836,6 @@ const updateEvent =  () =>{
     "link": video.name === "No video call" ? "":link,
     "author": eventData.author
   }
-  alert(JSON.stringify(putEvent,0 ,1));
 
   fetch(`http://localhost:3030/events/${eventData.id}`, {
     method: 'PATCH',

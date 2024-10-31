@@ -1,11 +1,11 @@
 {
   "events": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Break time",
       "startTime": "13:00:00",
       "endTime": "14:00:00",
-      "location": "",
+      "location": "Anywhere",
       "classNames": [
         "bg-orange-200",
         "text-orange-800",
@@ -17,9 +17,9 @@
       "editable": false
     },
     {
-      "id": 2,
-      "title": "Daily Up",
-      "location": "MAVDEV common space",
+      "id": "2",
+      "title": "Daily Scrum",
+      "location": "Maviance Dev office",
       "startTime": "08:30:00",
       "endTime": "09:00:00",
       "status": "Recurrent",
@@ -38,7 +38,7 @@
       "teams": [
         {
           "id": 1,
-          "name": "I.T",
+          "name": "IT",
           "color": [
             "bg-fuschia-300",
             "text-fuschia-800"
@@ -48,6 +48,114 @@
       "link": "https//:www.teams.microsoft.com/ert-pou",
       "author": "Cron",
       "editable": false
+    },
+    {
+      "id": "bKKi",
+      "title": "Innovation Meeting",
+      "start": "2024-10-31T13:00:00.000Z",
+      "end": "2024-10-31T14:00:00.000Z",
+      "location": "Meeting Room",
+      "status": "Postponed",
+      "classNames": [
+        "bg-purple-200",
+        "text-purple-800",
+        "border-0"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 5,
+          "name": "IT"
+        }
+      ],
+      "link": "https//:www.google.meet.com/ptoy-mbkl",
+      "author": "Testy"
+    },
+    {
+      "id": "4Vkf",
+      "title": "Hang up w/ ezy",
+      "start": "2024-10-31T11:00:00.000Z",
+      "end": "2024-10-31T11:30:00.000Z",
+      "location": "Meeting Room",
+      "status": "Postponed",
+      "classNames": [
+        "bg-purple-200",
+        "text-purple-800",
+        "border-0"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 2,
+          "name": "Business"
+        }
+      ],
+      "link": "",
+      "author": "Testy"
+    },
+    {
+      "id": "6yCJ",
+      "title": "Digital strategic meeting",
+      "start": "2024-10-31T14:00:00.000Z",
+      "end": "2024-10-31T14:30:00.000Z",
+      "location": "Meeting Room",
+      "status": "Future",
+      "classNames": [
+        "bg-green-200",
+        "text-green-800",
+        " border-green-200"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 3,
+          "name": "Marketing"
+        },
+        {
+          "id": 2,
+          "name": "Business"
+        },
+        {
+          "id": 4,
+          "name": "Finance"
+        }
+      ],
+      "link": "",
+      "author": "Testy"
+    },
+    {
+      "id": "QarX",
+      "title": "Library club ",
+      "start": "2024-10-31T15:00:00.000Z",
+      "end": "2024-10-31T15:30:00.000Z",
+      "location": "Maviance Hall",
+      "status": "Future",
+      "classNames": [
+        "bg-green-200",
+        "text-green-800",
+        " border-green-200"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 1,
+          "name": "Maviance staff"
+        }
+      ],
+      "link": "https//:www.google.meet.com/ptoy-mbkl",
+      "author": "Testy"
     }
   ]
 }

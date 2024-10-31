@@ -17,7 +17,7 @@ function Layout({Outlet}) {
             <h4 className="text-semibold text-xs text-zinc-800">The agile planner</h4>
             </div>
             </div>
-            <div className='w-40 mx-auto h-[1.5px] my-1.5 bg-gray-200 rounded-md'></div>
+            <div className='w-[90%] mx-auto h-[1.4px] my-1.5 bg-gray-200 rounded-md'></div>
 
             {/* Main section */}
             <div className='w-full flex flex-col pr-6 h-[62%]'>
@@ -69,9 +69,12 @@ function Layout({Outlet}) {
             </div>
 
             {/* Profile */}
-            <div className='w-40 mx-auto h-[1.3px] my-1.5 bg-gray-200 rounded-md'></div>
+          <div className=' absolute bottom-2 w-full h-auto flex flex-col justify-center'>
+          <div className='w-[90%] mx-auto h-[1.2px] my-1.5 bg-gray-200 rounded-md'></div>
             <div className='w-full h-auto flex items-center p-2  mt-1'>
-                <div className='h-[32px] w-[32px] rounded-full bg-gray-200 mr-2'></div>
+                <div className='flex items-center justify-center h-[32px] w-[32px] rounded-full bg-[#0A0458] mr-2'>
+                  <h6 className='text-white text-center text-xs font-bold'>BA</h6>
+                </div>
                 <div className="flex flex-col w-auto">
                     <h3 className='flex items-center font-semibold text-sm text-zinc-800'>Barry Anong</h3>
                     <h4 className="text-semibold text-[10px] text-zinc-800">anongbarry@gmail.com</h4>
@@ -84,6 +87,7 @@ function Layout({Outlet}) {
                   <div className='text-[13px] font-semibold text-red-600'>Log out</div>
                   </div></div>
             </NavLink>
+          </div>
         </div>
         {/* End sidebar */}
     {Outlet}
