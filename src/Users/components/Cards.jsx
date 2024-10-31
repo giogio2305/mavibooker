@@ -12,6 +12,8 @@ function Cards({ event }) {
     const today = new Date();
     const startOfDay = new Date(today.setHours(0, 0, 0, 0));
     const endOfDay = new Date(today.setHours(23, 59, 59, 999));
+    const eventStatus = event.status;
+
 
     // Vérifiez si l'événement est aujourd'hui et n'est pas "Break Time"
     if (event.title === 'Break Time' || new Date(event.start) < startOfDay || new Date(event.start) > endOfDay) {
@@ -48,9 +50,11 @@ function Cards({ event }) {
         const now = new Date();
         const timeDiff = new Date(eventStart) - now;
 
-        if (timeDiff > 0) {
+        if (timeDiff > 0 && eventStatus !== 'Canceled') {
             const minutes = Math.ceil(timeDiff / 60000);
             return `Begin in ${minutes} min`;
+        } else if(timeDiff > 0 && eventStatus === 'Canceled') { 
+            return 'Canceled';
         }
         return 'Passed';
     };
@@ -75,12 +79,12 @@ function Cards({ event }) {
         backgroundColor = 'bg-zinc-100';
         icon = <CheckCircleIcon className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Passed';
-    } else if (new Date(event.start) - new Date() <= 30 * 60000) { // Proche si moins de 30 minutes
+    } else if (new Date(event.start) - new Date() <= 30 * 60000 && eventStatus !=='Canceled') { // Proche si moins de 30 minutes
         statusColor = 'text-green-800'; // Vert pour proche
         icon = <Timer className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Event is coming soon'; // Texte pour l'événement proche
-    } else if (event.cancelled) { // Si l'événement est annulé
-        statusColor = 'text-red-600'; // Rouge pour annulé
+    } else if (timeUntilEvent === 'Canceled') { // Si l'événement est annulé
+        statusColor = 'text-red-800'; // Rouge pour annulé
         backgroundColor = 'bg-red-100';
         icon = <XCircleIcon className={`w-4 h-4 ${statusColor} mx-0.5`} />;
         statusText = 'Cancelled'; // Texte pour annulé

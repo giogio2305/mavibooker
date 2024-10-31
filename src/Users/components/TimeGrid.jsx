@@ -854,8 +854,21 @@ const updateEvent =  () =>{
 }
 
 const deleteEvent = () => {
+  const cancelEvent =
+  {
+    "status": 'Canceled',
+    "classNames": [
+      "bg-red-200",
+      "text-red-800",
+      "border-0"
+    ],
+  }
   fetch(`http://localhost:3030/events/${eventData.id}`, {
-    method: 'DELETE'
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(cancelEvent)
   })
   .then(response => response.json())
   .then(data => {
@@ -1286,7 +1299,7 @@ const deleteEvent = () => {
         {isMe === true && <div className='min-w-52 px-2 py-1.5 font-semibold rounded text-white text-xs bg-[#100693] mx-1.5 cursor-pointer' onClick={updateEvent}>Update event</div>}
         </div>
         {isMe === true && 
-        <div className='min-w-52 px-2 py-1 shadow font-semibold rounded text-red-700 text-xs bg-white ring-1 ring-gray-300 mx-1.5 cursor-pointer' onClick={deleteEvent}>Delete</div>
+        <div className='min-w-52 px-2 py-1 shadow font-semibold rounded text-red-700 text-xs bg-white ring-1 ring-gray-300 mx-1.5 cursor-pointer' onClick={deleteEvent}>Cancel event</div>
       }
         </div>
         </main>
