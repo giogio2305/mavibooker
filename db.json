@@ -133,31 +133,6 @@
       "author": "Testy"
     },
     {
-      "id": "QarX",
-      "title": "Library club ",
-      "start": "2024-10-31T15:00:00.000Z",
-      "end": "2024-10-31T15:30:00.000Z",
-      "location": "Maviance Hall",
-      "status": "Future",
-      "classNames": [
-        "bg-green-200",
-        "text-green-800",
-        " border-green-200"
-      ],
-      "dow": null,
-      "dom": null,
-      "doy": null,
-      "editable": false,
-      "teams": [
-        {
-          "id": 1,
-          "name": "Maviance staff"
-        }
-      ],
-      "link": "https//:www.google.meet.com/ptoy-mbkl",
-      "author": "Testy"
-    },
-    {
       "id": "WQzc",
       "title": "Daily recap",
       "start": "2024-10-31T15:30:00.000Z",
@@ -210,6 +185,125 @@
       ],
       "link": "",
       "author": "Testy"
+    },
+    {
+      "id": "APXZ",
+      "title": "Merveille Send  off",
+      "start": "2024-11-01T15:30:00.000Z",
+      "end": "2024-11-01T16:00:00.000Z",
+      "location": "Meeting Room",
+      "status": "Future",
+      "classNames": [
+        "bg-green-200",
+        "text-green-800",
+        " border-green-200"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 5,
+          "name": "IT"
+        }
+      ],
+      "link": "",
+      "author": "Testy"
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "name": "Maviance staff",
+      "description": "All Maviance employees",
+      "department": "General",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "isActive": true,
+      "teamLead": "John Doe",
+      "emailAlias": "staff@maviance.com",
+      "meetingRoom": "Maviance Hall",
+      "defaultMeetingDuration": 30
+    },
+    {
+      "id": 2,
+      "name": "Business",
+      "description": "Business development team",
+      "department": "Sales",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "isActive": true,
+      "teamLead": "Jane Smith",
+      "emailAlias": "business@maviance.com",
+      "meetingRoom": "Meeting Room",
+      "defaultMeetingDuration": 60
+    },
+    {
+      "id": 3,
+      "name": "Marketing",
+      "description": "Marketing and communications team",
+      "department": "Marketing",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "isActive": true,
+      "teamLead": "Mark Wilson",
+      "emailAlias": "marketing@maviance.com",
+      "meetingRoom": "Marketing Office",
+      "defaultMeetingDuration": 45
+    },
+    {
+      "id": 4,
+      "name": "Finance",
+      "description": "Finance and accounting team",
+      "department": "Finance",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "isActive": true,
+      "teamLead": "Sarah Brown",
+      "emailAlias": "finance@maviance.com",
+      "meetingRoom": "Finance Room",
+      "defaultMeetingDuration": 30
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe", 
+      "email": "john.doe@maviance.com",
+      "phone": "+237 123456789",
+      "position": "Operations Manager",
+      "department": "Operations",
+      "dateAdded": "2024-01-01T00:00:00.000Z",
+      "isActive": true,
+      "teamIds": [1],
+      "skills": [
+        "Project Management",
+        "Team Leadership"
+      ],
+      "avatar": null,
+      "officeLocation": "Douala",
+      "employeeId": "EMP001",
+      "reportsTo": null
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@maviance.com", 
+      "phone": "+237 987654321",
+      "position": "Sales Director",
+      "department": "Sales",
+      "dateAdded": "2024-01-01T00:00:00.000Z",
+      "isActive": true,
+      "teamIds": [1],
+      "skills": [
+        "Sales",
+        "Business Development"
+      ],
+      "avatar": null,
+      "officeLocation": "Yaoundé",
+      "employeeId": "EMP002",
+      "reportsTo": 1
     }
   ]
 }

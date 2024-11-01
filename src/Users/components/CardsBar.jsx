@@ -55,9 +55,11 @@ function CardsBar({setMeetings}) {
     <div className="w-full min-h-[200px] flex items-center overflow-x-auto justify-start p-3 mt-1">
     {/* Card */}
 
-    {dbEvents.map((event) => (
+    {dbEvents.length > 0 && dbEvents.map((event) => (
       <Card key={event._id} event={event} />
     ))}
+
+    {dbEvents.length === 0 && <div className='w-full text-center font-semibold text-gray-500'>No events today</div>}
 
   </div>
   )

@@ -68,7 +68,7 @@ function Cards({ event }) {
     let statusText = timeUntilEvent;
     const eventStart = new Date(event.start);
     const eventEnd = new Date(event.end);
-    const now = new Date();
+    const now = new Date(); 
 
     if (now >= eventStart && now <= eventEnd && eventStatus !=='Canceled') {
         // Si l'événement est en cours
