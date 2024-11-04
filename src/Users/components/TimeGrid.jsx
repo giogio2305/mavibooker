@@ -8,7 +8,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import rrulePlugin from '@fullcalendar/rrule'
 import interactionPlugin from '@fullcalendar/interaction'
-import {  createEventId } from './event-utils'
+import {  createEventId } from '../utils/event-utils'
 import { AntennaSignal, ArrowRight, Cancel,Trash,WarningTriangle ,Community, Internet, Computer, Clock, Pin, PinAlt, Repeat, Timer, VideoCamera, VideoCameraOff, VideoProjector, BreadSlice} from 'iconoir-react'
 import DatePicker from 'react-datepicker'
 import moment from"moment";
@@ -17,6 +17,7 @@ import { computeShrinkWidth } from '@fullcalendar/core/internal';
 import toast, { Toaster } from "react-hot-toast";
 import classNames from "classnames";
 import styles from '../../App.module.css'
+import useTeams from '../utils/useTeams';
 
 
 const date = new Date();
@@ -33,19 +34,9 @@ const people = [
   { name: 'Maviance Marketing office' },
 ]
 
-const teams = [
-  { id: 1, name: "Maviance staff" },
-  { id: 2, name: "Business" },
-  { id: 3, name: "Marketing" },
-  { id: 4, name: "Finance" },
-  { id: 5, name: "IT" },
-  { id: 6, name: "Ops" },
-  { id: 7, name: "Frontend" },
-  { id: 8, name: "Backend" },
-  { id: 9, name: "Q.A" },
-  { id: 10, name: "UI/UX" },
-  { id: 11, name: "Product Team" }
-];
+
+
+
 
 const statusArr = [
   { name: 'Future', "classNames": ["bg-green-200", "text-green-800"," border-green-200"]},
@@ -97,6 +88,7 @@ const notify = () =>
   );
 
 function TimeGrid() {
+const { teams } = useTeams();
 const [weekendsVisible, setweekendsVisible] = useState(false)
 const [currentEvents, setcurrentEvents] = useState([])
 const [dbEvents, setDbEvents] = useState(null)
@@ -104,6 +96,8 @@ const [slotData, setSlotData] = useState(null)
 const [slotEventData, setSlotEventData] = useState(null)
 const [evmd, setEvmd] = useState(false)
 const [eved, setEved] = useState(false)
+
+
 let calendarRef = useRef(null)
 
 const closeModal = () => {
@@ -158,7 +152,8 @@ const handleEvents = (events) => {setcurrentEvents(events)}
 
 
   useEffect(() => {
-    fetch("http://localhost:3030/events") // replace with your API endpoint
+    
+    fetch("http://localhost:3030/events")
       .then((response) => response.json())
       .then((slotData) => setDbEvents(slotData));
   }, []);
@@ -169,6 +164,8 @@ const handleEvents = (events) => {setcurrentEvents(events)}
       .then((response) => response.json())
       .then((slotData) => setDbEvents(slotData));
   };
+
+  
   return (<>
 
   <NewEvent slotData={slotData} evmd={evmd} onClose={closeModal} fetchEvents={fetchEvents}/>
@@ -202,6 +199,8 @@ const handleEvents = (events) => {setcurrentEvents(events)}
     eventClick={handleEventClick}
     events={dbEvents}
     eventsSet={handleEvents} // called after events are initialized/added/changed/removed
+    nowIndicator={true}
+    now={new Date()}
     /* you can update a remote database when these fire:
     eventAdd={function(){}}
     eventChange={function(){}}
@@ -288,6 +287,7 @@ const NewEvent = ({slotData, evmd, onClose, fetchEvents}) => {
   const [video, setVideo] = useState(vidCallArr[2]);
   const [selectedTeam, setSelectedTeam] = useState([]);
   const [query, setQuery] = useState("");
+  const {teams} = useTeams();
   
   
     const filteredTeams =
@@ -770,6 +770,7 @@ const Event =({slotEventData, eved, onClose, fetchEvents})=>{
   const [video, setVideo] = useState(vidCallArr[2]);
   const [selectedTeam, setSelectedTeam] = useState([]);
   const [query, setQuery] = useState("");
+  const {teams} = useTeams();
 
   
   useEffect(() => {

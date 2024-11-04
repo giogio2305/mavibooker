@@ -3,9 +3,10 @@
     {
       "id": "1",
       "title": "Break time",
-      "startTime": "13:00:00",
+      "startTime": "13:00:00", 
       "endTime": "14:00:00",
       "location": "Anywhere",
+      "resourceId": 0,
       "classNames": [
         "bg-orange-200",
         "text-orange-800",
@@ -19,9 +20,10 @@
     {
       "id": "2",
       "title": "Daily Scrum",
-      "location": "Maviance Dev office",
+      "location": "Maviance IT Office",
+      "resourceId": "3",
       "startTime": "08:30:00",
-      "endTime": "09:00:00",
+      "endTime": "09:00:00", 
       "status": "Recurrent",
       "dow": [
         1,
@@ -49,12 +51,14 @@
       "author": "Cron",
       "editable": false
     },
+
     {
       "id": "bKKi",
       "title": "Innovation Meeting",
       "start": "2024-10-31T13:00:00.000Z",
       "end": "2024-10-31T14:00:00.000Z",
       "location": "Meeting Room",
+      "resourceId": "1",
       "status": "Past",
       "classNames": [
         "bg-slate-200",
@@ -80,6 +84,7 @@
       "start": "2024-10-31T11:00:00.000Z",
       "end": "2024-10-31T11:30:00.000Z",
       "location": "Meeting Room",
+      "resourceId": "1",
       "status": "Postponed",
       "classNames": [
         "bg-purple-200",
@@ -105,6 +110,7 @@
       "start": "2024-10-31T14:00:00.000Z",
       "end": "2024-10-31T14:30:00.000Z",
       "location": "Meeting Room",
+      "resourceId": "1",
       "status": "Future",
       "classNames": [
         "bg-green-200",
@@ -137,7 +143,8 @@
       "title": "Daily recap",
       "start": "2024-10-31T15:30:00.000Z",
       "end": "2024-10-31T16:00:00.000Z",
-      "location": "Maviance Marketing office",
+      "location": "Maviance Marketing Office",
+      "resourceId": "4",
       "status": "Canceled",
       "classNames": [
         "bg-red-200",
@@ -167,6 +174,7 @@
       "start": "2024-10-31T16:00:00.000Z",
       "end": "2024-10-31T16:30:00.000Z",
       "location": "Meeting Room",
+      "resourceId": "1",
       "status": "Future",
       "classNames": [
         "bg-green-200",
@@ -192,6 +200,7 @@
       "start": "2024-11-01T15:30:00.000Z",
       "end": "2024-11-01T16:00:00.000Z",
       "location": "Meeting Room",
+      "resourceId": "1",
       "status": "Future",
       "classNames": [
         "bg-green-200",
@@ -210,11 +219,98 @@
       ],
       "link": "",
       "author": "Testy"
+    },
+    {
+      "id": "QnDO",
+      "title": "Sergio star awards",
+      "start": "2024-11-04T09:00:00.000Z",
+      "end": "2024-11-04T09:30:00.000Z",
+      "location": "Maviance IT Office",
+      "resourceId": "3",
+      "status": "Future",
+      "classNames": [
+        "bg-green-200",
+        "text-green-800",
+        " border-green-200"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": 5,
+          "name": "IT"
+        }
+      ],
+      "link": "",
+      "author": "Testy"
+    },
+    {
+      "id": "A6UH",
+      "title": "Incident report",
+      "start": "2024-11-04T14:00:00.000Z",
+      "end": "2024-11-04T15:00:00.000Z",
+      "location": "Meeting Room",
+      "resourceId": "1",
+      "status": "Postponed",
+      "classNames": [
+        "bg-purple-200",
+        "text-purple-800",
+        "border-0"
+      ],
+      "dow": null,
+      "dom": null,
+      "doy": null,
+      "editable": false,
+      "teams": [
+        {
+          "id": "11",
+          "name": "Product Team",
+          "description": "Product team",
+          "department": "IT",
+          "createdAt": "2024-01-01T00:00:00.000Z",
+          "updatedAt": "2024-01-01T00:00:00.000Z",
+          "isActive": true,
+          "teamLead": "John Doe",
+          "emailAlias": "product@maviance.com",
+          "meetingRoom": "Product Room",
+          "defaultMeetingDuration": 30
+        },
+        {
+          "id": "9",
+          "name": "Quality Assurance",
+          "description": "Quality Assurance team",
+          "department": "IT",
+          "createdAt": "2024-01-01T00:00:00.000Z",
+          "updatedAt": "2024-01-01T00:00:00.000Z",
+          "isActive": true,
+          "teamLead": "John Doe",
+          "emailAlias": "qa@maviance.com",
+          "meetingRoom": "Q.A Room",
+          "defaultMeetingDuration": 30
+        },
+        {
+          "id": "6",
+          "name": "Operations",
+          "description": "Operations team",
+          "department": "Ops",
+          "createdAt": "2024-01-01T00:00:00.000Z",
+          "updatedAt": "2024-01-01T00:00:00.000Z",
+          "isActive": true,
+          "teamLead": "John Doe",
+          "emailAlias": "ops@maviance.com",
+          "meetingRoom": "Ops Room",
+          "defaultMeetingDuration": 30
+        }
+      ],
+      "link": "https//:www.google.meet.com/ptoy-mbkl",
+      "author": "Testy"
     }
   ],
   "teams": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Maviance staff",
       "description": "All Maviance employees",
       "department": "General",
@@ -227,7 +323,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Business",
       "description": "Business development team",
       "department": "Sales",
@@ -240,7 +336,7 @@
       "defaultMeetingDuration": 60
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Marketing",
       "description": "Marketing and communications team",
       "department": "Marketing",
@@ -253,7 +349,7 @@
       "defaultMeetingDuration": 45
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Finance",
       "description": "Finance and accounting team",
       "department": "Finance",
@@ -266,7 +362,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "IT",
       "description": "IT team",
       "department": "IT",
@@ -279,7 +375,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Operations",
       "description": "Operations team",
       "department": "Ops",
@@ -292,7 +388,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Frontend",
       "description": "Frontend team",
       "department": "IT",
@@ -305,7 +401,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Backend",
       "description": "Backend team",
       "department": "IT",
@@ -318,7 +414,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Quality Assurance",
       "description": "Quality Assurance team",
       "department": "IT",
@@ -331,7 +427,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "UI/UX",
       "description": "UI/UX team",
       "department": "IT",
@@ -344,7 +440,7 @@
       "defaultMeetingDuration": 30
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Product Team",
       "description": "Product team",
       "department": "IT",
@@ -356,19 +452,21 @@
       "meetingRoom": "Product Room",
       "defaultMeetingDuration": 30
     }
-
   ],
   "employees": [
     {
-      "id": 1,
-      "name": "Carl Dongmo", 
+      "id": "1",
+      "name": "Carl Dongmo",
       "email": "carl.dongmo@maviance.com",
       "phone": "+237 123456789",
       "position": "Operations Manager",
       "department": "Operations",
       "dateAdded": "2024-01-01T00:00:00.000Z",
       "isActive": true,
-      "teamIds": [1, 6],
+      "teamIds": [
+        1,
+        6
+      ],
       "skills": [
         "Project Management",
         "Team Leadership"
@@ -379,15 +477,18 @@
       "reportsTo": null
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jane Smith",
-      "email": "jane.smith@maviance.com", 
+      "email": "jane.smith@maviance.com",
       "phone": "+237 987654321",
       "position": "Sales Director",
       "department": "Sales",
       "dateAdded": "2024-01-01T00:00:00.000Z",
       "isActive": true,
-      "teamIds": [1, 3],
+      "teamIds": [
+        1,
+        3
+      ],
       "skills": [
         "Sales",
         "Business Development"
@@ -398,7 +499,7 @@
       "reportsTo": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Merveille Septo",
       "email": "merveille@maviance.com",
       "phone": "+237 123456789",
@@ -406,7 +507,10 @@
       "department": "Operations",
       "dateAdded": "2024-01-01T00:00:00.000Z",
       "isActive": true,
-      "teamIds": [1, 6],
+      "teamIds": [
+        1,
+        6
+      ],
       "skills": [
         "Project Management",
         "Team Leadership"
@@ -417,15 +521,18 @@
       "reportsTo": null
     },
     {
-      "id": 4,
-      "name": "John Epee", 
+      "id": "4",
+      "name": "John Epee",
       "email": "john.doe@maviance.com",
       "phone": "+237 123456789",
       "position": "Operations Manager",
       "department": "Operations",
       "dateAdded": "2024-01-01T00:00:00.000Z",
       "isActive": true,
-      "teamIds": [1, 6],
+      "teamIds": [
+        1,
+        6
+      ],
       "skills": [
         "Project Management",
         "Team Leadership"
@@ -434,6 +541,105 @@
       "officeLocation": "Douala",
       "employeeId": "EMP004",
       "reportsTo": null
+    }
+  ],
+  "resources": [
+    {
+      "id": "1",
+      "name": "Meeting Room",
+      "type": "meeting_room",
+      "capacity": 20,
+      "location": "2nd Floor",
+      "description": "Main meeting room for general use",
+      "amenities": [
+        "projector",
+        "whiteboard",
+        "video_conferencing"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "defaultDuration": 60,
+      "primaryTeamId": null,
+      "bookingRequiresApproval": false
+    },
+    {
+      "id": "2", 
+      "name": "Maviance Hall",
+      "type": "conference_room",
+      "capacity": 100,
+      "location": "Ground Floor",
+      "description": "Large conference hall for company-wide meetings",
+      "amenities": [
+        "projector",
+        "sound_system",
+        "video_conferencing",
+        "catering_area"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "defaultDuration": 120,
+      "primaryTeamId": "1",
+      "bookingRequiresApproval": true
+    },
+    {
+      "id": "3",
+      "name": "Maviance IT Office",
+      "type": "office_space",
+      "capacity": 15,
+      "location": "3rd Floor",
+      "description": "Office space for IT department",
+      "amenities": [
+        "projector",
+        "whiteboard",
+        "video_conferencing",
+        "dev_equipment"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "defaultDuration": 30,
+      "primaryTeamId": "5",
+      "bookingRequiresApproval": false
+    },
+    {
+      "id": "4",
+      "name": "Maviance Marketing Office",
+      "type": "office_space",
+      "capacity": 10,
+      "location": "1st Floor",
+      "description": "Marketing team workspace and meeting area",
+      "amenities": [
+        "whiteboard",
+        "video_conferencing",
+        "creative_space"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "defaultDuration": 45,
+      "primaryTeamId": "3",
+      "bookingRequiresApproval": true
+    },
+    {
+      "id": "5",
+      "name": "Maviance Deido Office",
+      "type": "office_space",
+      "capacity": 15,
+      "location": "3rd Floor",
+      "description": "Deido Office space for operations",
+      "amenities": [
+        "projector",
+        "whiteboard",
+        "video_conferencing"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "defaultDuration": 30,
+      "primaryTeamId": "6",
+      "bookingRequiresApproval": false
     }
   ]
 }

@@ -45,7 +45,7 @@ function CardsBar({setMeetings}) {
 
         fetchEvents(); // Appel initial pour obtenir les données
 
-        const intervalId = setInterval(fetchEvents, 10000); // Polling toutes les 45 secondes
+        const intervalId = setInterval(fetchEvents, 50000); // Polling toutes les 45 secondes
 
         return () => clearInterval(intervalId); // Nettoyage de l'intervalle lors du démontage
     }, []);

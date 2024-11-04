@@ -107,7 +107,7 @@ function Cards({ event }) {
                 <div className="flex w-full items-center my-2">
                     <Group strokeWidth={2} className='w-3.5 h-3.5 mr-2 text-gray-500' />
                     {event.teams.map(team => (
-                        <Link to='/team/business' className={`px-2.5 py-0.5 rounded-lg ${statusColor} mr-0.5 ${backgroundColor} text-[10px] font-bold`} key={team.id}>{team.name}</Link>
+                        <Link to='/team/business' className={`px-2.5 truncate py-0.5 rounded-lg ${statusColor} mr-0.5 ${backgroundColor} text-[10px] font-bold`} key={team.id}>{team.name}</Link>
                     ))}
                 </div>
             )}
